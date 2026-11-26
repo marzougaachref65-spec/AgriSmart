@@ -1,0 +1,10 @@
+/**
+ * Format uniforme des réponses API réussies.
+ */
+export function sendSuccess(res, data = null, message = 'OK', statusCode = 200) {
+  return res.status(statusCode).json({
+    success: true,
+    message,
+    data,
+  })
+}
